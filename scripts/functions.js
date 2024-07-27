@@ -21,7 +21,7 @@ async function displaySlide1() {
     .ticks(10));
 
     svg.append('g').selectAll("dot")
-    .data(dataset1)
+    .data(data)
     .enter()
     .append("circle")
     .attr("cx", function (d) { return x(d.Date); } )
