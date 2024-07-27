@@ -9,9 +9,10 @@ async function displaySlide1() {
     .range([20, width-20]);
     var y = d3.scaleLinear()
         .domain([0, 6000])
-        .range([20, height-20]);
+        .range([height-20, 20]);
+
     svg.append('g').classed('x axis', true)
-  .attr("transform", "translate(20,780)")
+  .attr("transform", "translate(20,1080)")
   .call(d3.axisBottom(x)
     .tickFormat(d3.timeFormat("%Y-%m-%d")).tickValues(data.map(function(d) { return new Date(d.Date)}) ));
 
