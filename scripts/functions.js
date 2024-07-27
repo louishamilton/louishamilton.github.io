@@ -1,5 +1,3 @@
-import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
-
 async function displaySlide1() {
     var width = 1100;
     var height = 800;
@@ -21,4 +19,13 @@ async function displaySlide1() {
   .classed('y axis', true)
   .call(d3.axisLeft(y)
     .ticks(10));
+
+    svg.append('g').selectAll("dot")
+    .data(dataset1)
+    .enter()
+    .append("circle")
+    .attr("cx", function (d) { return x(d.Date); } )
+    .attr("cy", function (d) { return y(d.Close); } )
+    .attr("r", 2);
+    //.attr("transform", "translate(" + 100 + "," + 100 + ")");
 }
