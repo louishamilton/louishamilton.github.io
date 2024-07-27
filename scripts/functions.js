@@ -15,6 +15,10 @@ async function displaySlide1() {
     svg.append('g').classed('x axis', true)
   .attr("transform", "translate(20,780)")
   .call(d3.axisBottom(x)
-    .tickFormat(d3.timeFormat("%Y-%m-%d")).tickValues(data.map(function(d) { return new Date(d.Date)}) ))
-    ;
+    .tickFormat(d3.timeFormat("%Y-%m-%d")).tickValues(data.map(function(d) { return new Date(d.Date)}) ));
+
+    svg.append('g')
+  .classed('y axis', true)
+  .call(d3.axisLeft(y)
+    .ticks(10));
 }
