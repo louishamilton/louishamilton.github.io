@@ -25,7 +25,7 @@ async function displaySlide1() {
     .data(data)
     .enter()
     .append("circle")
-    .attr("cx", function (d) { return x(d.Date); } )
+    .attr("cx", function (d) { return x(Date(d.Date)); } )
     .attr("cy", function (d) { return y(d.Close); } )
     .attr("r", 2);
     //.attr("transform", "translate(" + 100 + "," + 100 + ")");
