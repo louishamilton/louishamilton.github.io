@@ -37,6 +37,29 @@ async function displaySlide1() {
     .attr("cy", function (d) { return y(Number(d.Close)); } )
     .attr("r", 2);
 
+    svg.append("rect")
+    .attr("x", x(dateComp) + 50)
+    .attr("width", x(dateComp2) - x(dateComp))
+    .attr("y", 50)
+    .attr("height", height - 100)
+    .attr("opacity", .5)
+
+    svg.append("rect")
+    .attr("fill", "yellow")
+    .attr("x", 50)
+    .attr("width", x(dateComp))
+    .attr("y", 50)
+    .attr("height", height - 100)
+    .attr("opacity", .5)
+
+    svg.append("rect")
+    .attr("fill", "green")
+    .attr("x", 50 + x(dateComp2))
+    .attr("width", 1000 - x(dateComp2))
+    .attr("y", 50)
+    .attr("height", height - 100)
+    .attr("opacity", .5)
+
     svg.append("line")
     .attr("x1", x(DotcomBubblePeaks)+50)
     .attr("y1", 50)
@@ -91,6 +114,44 @@ async function displaySlide1() {
     .style("stroke", "red")
     .style("fill", "none")
     .append("svg:title").text("Civil War Begins")
+
+    svg.append("line")
+    .attr("x1", x(dateComp)+50)
+    .attr("y1", 50)
+    .attr("x2", x(dateComp)+50)
+    .attr("y2", height - 50)
+    .style("stroke-opacity", 1)
+    .style("stroke-width", 3)
+    .style("stroke", "black")
+    .style("fill", "none")
+
+    svg.append("line")
+    .attr("x1", x(dateComp2)+50)
+    .attr("y1", 50)
+    .attr("x2", x(dateComp2)+50)
+    .attr("y2", height - 50)
+    .style("stroke-opacity", 1)
+    .style("stroke-width", 3)
+    .style("stroke", "black")
+    .style("fill", "none")
+
+    svg.append("text").text("The Early Years")
+    .attr("x", 75)
+    .attr("y", 250)
+    .style("font-size", "22px")
+    .style("font-weight", "bold")
+
+    svg.append("text").text("The Lost Century")
+    .attr("x", 394)
+    .attr("y", 400)
+    .style("font-size", "22px")
+    .style("font-weight", "bold")
+
+    svg.append("text").text("The Modern Market")
+    .attr("x", 775)
+    .attr("y", 550)
+    .style("font-size", "22px")
+    .style("font-weight", "bold")
 }
 
 async function displaySlide2() {
