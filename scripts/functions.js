@@ -43,6 +43,7 @@ async function displaySlide1() {
     .attr("y", 50)
     .attr("height", height - 100)
     .attr("opacity", .5)
+    .attr("fill", "gray")
 
     svg.append("rect")
     .attr("fill", "yellow")
@@ -187,6 +188,14 @@ async function displaySlide2() {
     .attr("cy", function (d) { return y(Number(d.Close)); } )
     .attr("r", 2);
 
+    svg.append("rect")
+    .attr("fill", "yellow")
+    .attr("x", 50)
+    .attr("width", 1000)
+    .attr("y", 50)
+    .attr("height", height - 100)
+    .attr("opacity", .5)
+
     svg.append("line")
 .attr("x1", x(louisianaPurchase)+50)
 .attr("y1", 50)
@@ -231,6 +240,14 @@ async function displaySlide3() {
     .attr("cx", function (d) { return x(new Date(d.Date)) + 50; } )
     .attr("cy", function (d) { return y(Number(d.Close)); } )
     .attr("r", 2);
+
+    svg.append("rect")
+    .attr("fill", "gray")
+    .attr("x", 50)
+    .attr("width", 1000)
+    .attr("y", 50)
+    .attr("height", height - 100)
+    .attr("opacity", .5)
 
     svg.append("line")
 .attr("x1", x(greatDepressionBegins)+50)
@@ -287,6 +304,14 @@ async function displaySlide4() {
     .attr("cx", function (d) { return x(new Date(d.Date)) + 50; } )
     .attr("cy", function (d) { return y(Number(d.Close)); } )
     .attr("r", 2);
+
+    svg.append("rect")
+    .attr("fill", "green")
+    .attr("x", 50)
+    .attr("width", 1000)
+    .attr("y", 50)
+    .attr("height", height - 100)
+    .attr("opacity", .5)
 
     svg.append("line")
 .attr("x1", x(DotcomBubblePeaks)+50)
@@ -348,6 +373,14 @@ async function displaySlide5(begin = new Date("12/31/1788"), end = new Date("12/
     .attr("cx", function (d) { return x(new Date(d.Date)) + 50; } )
     .attr("cy", function (d) { return y(Number(d.Close)); } )
     .attr("r", 2);
+
+    svg.append("rect")
+    .attr("fill", "pink")
+    .attr("x", 50)
+    .attr("width", 1000)
+    .attr("y", 50)
+    .attr("height", height - 100)
+    .attr("opacity", .25)
 
     svg.append("line")
     .attr("x1", x(DotcomBubblePeaks)+50)
